@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($id_usuario) || empty($nombre_turno) || empty($hora_inicio) || empty($hora_fin)) {
         $_SESSION['alert'] = 'Todos los campos son obligatorios.';
-        header("Location: asignacion_turnos.php");
+        header("Location: creacion_turnos.php");
         exit();
     }
 
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['alert_danger'] = "Error al guardar el turno: " . mysqli_error($conexion);
     }
 
-    header("Location: asignacion_turnos.php");
+    header("Location: creacion_turnos.php");
     exit();
 }
 ?>
